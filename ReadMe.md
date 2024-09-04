@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working in marketing automation within the danish financial sector<br>🌱 I’m currently learning more details about general Computer Science and expand my knowledge of programming languages<br>💬 Ask me about anything related to Power BI, Adobe Campaign or SQL.
+🔭 Proudly working in marketing automation within the danish financial sector<br>🌱 I’m currently learning more details about general Computer Science and expand my knowledge of programming languages<br>💬 Ask me about anything related to Power BI, Adobe Campaign or SQL.
 
 
 ## 🌐 Socials:
