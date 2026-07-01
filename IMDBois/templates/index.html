@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IMDBois</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>IMDBois</h1>
+        <p>Find en film, vælg den fra søgeresultaterne, og giv den en vurdering.</p>
+      </header>
+
+      <div class="page-grid">
+        <aside class="sidebar">
+          <strong>Menu</strong>
+          <nav>
+            <a href="/" class="active">Søg film</a>
+            <a href="/stats">Statistik</a>
+          </nav>
+        </aside>
+
+        <main class="content-grid">
+          <section class="left">
+            <h2>Søg og vurder</h2>
+            <p class="intro">Søg efter en film, vælg den fra listen, og giv den en vurdering.</p>
+            <div class="search-wrap">
+              <input id="search" placeholder="Søg film..." autocomplete="off" />
+            </div>
+            <ul id="suggestions" class="suggestions"></ul>
+
+            <div class="form-row">
+              <label for="reviewer">Anmelder</label>
+              <select id="reviewer">
+                <option value="">Vælg anmelder</option>
+                <option>Quentin BabyBino</option>
+                <option>Nars Von Larsen</option>
+                <option>Steven Spejlblank</option>
+                <option>Christopher Hoe-Man</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="rating">Vurdering</label>
+              <select id="rating">
+                <option value="">--</option>
+              </select>
+              <button id="submit" disabled>Send vurdering</button>
+            </div>
+
+            <div id="message" class="message"></div>
+          </section>
+
+          <section class="right">
+            <h2>Valgt film</h2>
+            <div id="selected-movie" class="selected-movie">
+              <p>Vælg en film fra søgeresultaterne for at se detaljer.</p>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <small>Simple movie tracker built with Flask + SQLite</small>
+      </footer>
+    </div>
+    <script src="/static/main.js"></script>
+  </body>
+</html>

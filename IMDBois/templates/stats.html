@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IMDBois Statistik</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>IMDBois</h1>
+        <p>Se statistik for film, genre, instruktør, år og gennemsnitlig spilletid.</p>
+      </header>
+
+      <div class="page-grid">
+        <aside class="sidebar">
+          <strong>Menu</strong>
+          <nav>
+            <a href="/">Søg film</a>
+            <a href="/stats" class="active">Statistik</a>
+          </nav>
+        </aside>
+
+        <main class="content-grid stats-page">
+          <section class="left">
+            <h2>Overblik</h2>
+            <div class="stats-panel">
+              <div class="stat-group">
+                <h3>Top genrer</h3>
+                <ul id="genre-list"></ul>
+              </div>
+              <div class="stat-group">
+                <h3>Top instruktører</h3>
+                <ul id="director-list"></ul>
+              </div>
+              <div class="stat-group">
+                <h3>Top anmeldere</h3>
+                <ul id="reviewer-list"></ul>
+              </div>
+              <div class="stat-group">
+                <h3>Udgivelsesår</h3>
+                <ul id="year-list"></ul>
+              </div>
+              <div class="stat-group">
+                <h3>Gns. spilletid</h3>
+                <p id="avg-runtime">Henter data...</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="right">
+            <h2>Filstatistik</h2>
+            <table id="stats-table">
+              <thead>
+                <tr><th>Titel</th><th>Gns.</th><th>Antal</th><th>Instruktør</th><th>År</th><th>Runtime</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <small>En enkel filmtracker bygget med Flask og SQLite</small>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>window.TMDB_IMAGE_BASE = "{{ TMDB_IMAGE_BASE }}";</script>
+    <script src="/static/stats.js"></script>
+  </body>
+</html>
